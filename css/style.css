@@ -3,6 +3,7 @@
     --bs-body-font-family:'Josefin Sans';
     --bs-font-monospace:'Open Sans';
     --bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --shadow:-4.828px -4.828px 12px 0px rgb(255 200 39 / 40%), 3px 5px 15px 0px rgb(255 82 1 / 20%);
 }
 .py-120{
     padding-top: 120px;
@@ -43,6 +44,25 @@ p{
     font-size: 19px;
     line-height: 1.7;
 }
+.box-shadow{
+    box-shadow:var(--shadow);
+}
+.overlay{
+    position: relative;
+    z-index: 1;
+}
+.overlay::after{
+    position:absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#350b2d;
+    opacity: 0.8;
+    z-index: -1;
+
+}
 header{
     position: absolute;
     z-index: 99;
@@ -52,6 +72,9 @@ header{
     --bs-nav-link-color:#fff;
     text-transform: uppercase;
     font-size: 14px;
+}
+.nav-link a{
+    padding: 4px 15px;
 }
 .nav-link:focus, .nav-link:hover{
     color: var(--bs-nav-link-color);
@@ -172,18 +195,6 @@ header{
     position: relative;
     z-index: 1;
     padding:  100px 0px;
-}
-.banner::after , .about::after , .product::after , .game-item::after , .why::after , .how::after , .modal-header::after , .modal-body::after , .modal-footer::after , .players::after{
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 1;
-    background-color: #350b2d;
-    opacity: 0.8;
-    z-index: -1;
 }
 .card , .about-img , .why-img{
     position: absolute;
@@ -311,7 +322,6 @@ header{
     border-radius: 50%;
     margin-bottom: 20px;
     background: linear-gradient(0deg, #ff9c19 40%, #ffdd2d 110%);
-    box-shadow: -4.828px -4.828px 12px 0px rgb(255 200 39 / 40%), 3px 5px 15px 0px rgb(255 82 1 / 20%);
     text-align: center;
 }
 .why-icon i{
@@ -340,7 +350,6 @@ header{
     display: none;
 }
 .how-icon{
-    box-shadow: -4.828px -4.828px 12px 0px rgb(255 200 39 / 40%), 3px 5px 15px 0px rgb(255 82 1 / 20%);
     width: 120px;
     height: 120px;
     background: #350b2d;
@@ -366,21 +375,6 @@ header{
 }
 .how-box:hover .how-text h4{
     color: #ff9c19;
-}
-.faq{
-    position: relative;
-    z-index: 1;
-}
-.faq::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #2e0327;
-    opacity: 0.8;
-    z-index:-1;
-    top: 0;
-    left: 0;
 }
 .faq-img{
     position: absolute;
@@ -432,16 +426,16 @@ header{
 .carousel-nav-icon svg{
    fill: #ff9c19;
 }
-.carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md {
+.carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md{
     margin: 8px;
     height: 330px;
     background-size: cover;
     background-position: center center;
-    box-shadow: -4.828px -4.828px 12px 0px rgb(255 200 39 / 40%), 3px 5px 15px 0px rgb(255 82 1 / 20%);
     background-image: url('../img/slider-bg.png');
     padding: 25px;
     position: relative;
     z-index: 1;
+    box-shadow: var(--shadow);
 
 }
 .slider-1::after{
@@ -488,15 +482,4 @@ footer{
     background-image: url('../img/bg\ \(1\).jpg');
     padding-top: 30px;
     padding-bottom: 30px;
-}
-footer::after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: #2e0327;
-    left: 0;
-    top: 0;
-    opacity: 0.8;
-    z-index: -1;
 }
