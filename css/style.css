@@ -173,7 +173,7 @@ header{
     z-index: 1;
     padding:  100px 0px;
 }
-.banner::after , .about::after , .product::after , .game-item::after , .why::after , .how::after , .modal-header::after , .modal-body::after , .modal-footer::after , .players::after{
+.banner::after , .about::after , .product::after , .game-item::after , .why::after , .how::after , .modal-header::after , .modal-body::after , .modal-footer::after , .players::after , .winner::after{
     position: absolute;
     content: '';
     left: 0;
@@ -419,10 +419,52 @@ header{
     --bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF' %3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
     --bs-accordion-btn-active-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffc107' %3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
 }
+.winner{
+    background-image: url('../img/winner-bg.png');
+
+}
+.player-img{
+    width: 100px;
+    height: 100px;
+    background-color: #ffdd2d;
+    border-radius: 50%;
+    border: 8px solid #350b2d;
+    box-shadow: -4.828px -4.828px 12px 0px rgb(255 200 39 / 40%), 3px 5px 15px 0px rgb(255 82 1 / 20%);
+    position: relative;
+    object-fit:cover;
+}
+.player-img img{
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+}
+.amount{
+    background-color: #ffdd2d;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 4px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    line-height: 1;
+}
+.winner-img{
+    width:250px ;
+    display: block;
+    margin: 10px auto;
+}
+
+
+
+
+
+
+
+
 .players{
     position: relative;
     padding-top: 0;
-
     z-index: 1;
 }
 .carousel-nav-icon {
@@ -500,3 +542,14 @@ footer::after{
     opacity: 0.8;
     z-index: -1;
 }
+/* about-banner */
+.about-banner{
+    background-image: url('../img/about-img.jpg');
+}
+.breadcrumb a{
+    color: var(--bs-dropdown-link-color);
+    text-decoration: none;
+}
+
+
+/* game */
